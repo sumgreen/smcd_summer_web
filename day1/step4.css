@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* font-family: 'Bagel Fat One', cursive; */
+  /* font-family: 'Diphylleia', serif; */
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  /* background-color: rgba(255, 0, 0, 0.1); */
+}
+
+.main {
+  /* background-color: rgba(255, 0, 0, 0.1); */
+}
+
+.section {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.section:nth-of-type(even) {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.container {
+  border: 1px solid black;
+  margin-inline: auto;
+  /* padding-block: 56px;
+  padding-inline: 24px; */
+  padding: 56px 24px;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* max-width: 65ch; */
+  max-width: 1024px;
+}
+
+h2 {
+  font-family: 'Bagel Fat One', cursive;
+}
+
+@media (width <= 600px) {
+  body {
+    font-size: 16px;
+  }
+}
