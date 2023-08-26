@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  /* 엄청나게 급진적인 리셋 방법인데, 사실 많이 씀. */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* 한글 단어는 안잘리면서 영어는 잘라서라도 해결해주는 방법 */
+  /* word-break: keep-all;
+  overflow-wrap: anywhere; */
+  /* 알빠노? 한글이라도 단어 잘라서 줄바꿈. 모바일일 때에는 아무데서나 줄바꿈하는게 낫다. */
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  /* *에서 지정해서 필요없지만 남겨둠. */
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.root {
+  height: 100dvh;
+  border: 1px solid slateblue;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.section {
+  min-width: 1rem;
+  /* background-color: hsla(0, 100%, 50%, 0.1); */
+}
+
+.nowrap {
+  /* 안되는데 나중에 알아보고 보충설명! */
+  white-space: nowrap;
+}
+
+img,
+video,
+picture,
+svg,
+object {
+  /* 디센더에 의한 틈새 처리를 위한 구문 */
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  /* 레이아웃 이상해지고, 다른 친구도 같이 마진 생겨버림... */
+  /* margin-top: 3rem; */
+}
+
+.title {
+  /* 여전히 마진으로 조지면 이상함 */
+  /* margin-top: 48px; */
+}
+
+.section {
+  /* 한놈만 조지는 게 아니라, 같은 이름을 가진 어느 친구든지 이 속성이 적용됨. */
+  /* padding-top: 48px; */
+}
+
+/* #section-1 {
+  padding-top: 48px;
+} */
+
+.section {
+  padding-block: 48px;
+  /* 배경의 가로가 잘려버리는 문제 */
+  /* max-width: 1024px; */
+}
+
+/* 굉장히 드럽고 번거로운 방법 */
+/* .section > * {
+    max-width: 1024px;
+} */
+
+/* .section이랑 #section 말하는 거임! id에 적용한 스타일이 class에 적용한 스타일보다 더 세다.
+상명대 학생 @@백신 맞을 건데, 누구누구는 $$백신 맞을게요~
+이런 것처럼 id는 지명한 느낌. */
+
+.container {
+  /* background-color: hsla(240, 100%, 50%, 0.1); */
+  margin-inline: auto;
+  max-width: 1024px;
+  padding-inline: 24px;
+}
+
+#section-1 {
+  padding-block: 80px;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+#section-1 .title {
+  margin-bottom: 8px;
+  font-size: 3rem;
+}
+
+#section-1 p {
+  margin-top: 24px;
+}
