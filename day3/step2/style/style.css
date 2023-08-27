@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  background-color: cornsilk;
+  padding-block: 3.5rem;
+  padding-inline: 1.5rem;
+  height: 900px;
+}
+
+.layout {
+  height: 100%;
+  background-color: indianred;
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: column; */
+  /* justify-content: start; */
+  /* justify-content: end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  justify-content: space-around;
+  /* align-items: stretch; */
+  /* align-items: start; */
+  align-items: center;
+  /* align-items: end; */
+  gap: 1rem;
+}
+
+.card {
+  width: 18.75rem;
+  /* height: fit-content;로 명시적인 사이즈를 설정해줄 수 있음.
+  명시적으로 준 건 그게 영향을 미치지만, 내가 지정해주지 않은 경우에는
+  외부적인 요소에 의해 간섭돼서 사이즈가 바뀔 수 있음. */
+  padding: 1.5rem;
+  background-color: bisque;
+  /* margin-inline: auto; */
+  /* => 카드가 하나일 때 중앙에 이렇게 둘 수 있음.
+  but, 카드가 늘어나면 가로로 못 놓음.
+  container의 높이값이 있으면(height: 900px;)
+  이건 또 어떻게 가운데에 놓지? */
+  /* 카드 하나면 잘 작동하는데, 세로 정렬 해결 못하고, 카드 옆에 카드 못두고... */
+  /* 과거에는 float: left; 썼는데 지금은 쓰지말 것 */
+}
+
+.button {
+  background-color: bisque;
+  padding: 0.75rem;
+}

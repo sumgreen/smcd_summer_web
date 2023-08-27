@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.div-box {
+  padding: 1.5rem;
+  background-color: brown;
+}
+
+.wrap {
+  position: relative;
+  padding: 56px;
+  background-color: cornflowerblue;
+}
+
+.child-in-div-box {
+  padding: 1.5rem;
+  background-color: burlywood;
+}
+
+.child-in-div-box:nth-of-type(2) {
+  /* position: static; */
+  /* position: relative; */
+  /* => 자기 자리를 그대로 두고 이동 */
+  /* position: absolute; */
+  /* => 자기 자리를 양보하고(?) 지명 부분이 다른 부분들을 무시하고 가장 맨 왼쪽 위(구석)를 기준으로 200, 50씩 이동하게 함. */
+  /* position: sticky; */
+  /* =>부모요소의 범위에서만 스크롤할 때 찰싹 붙어있음..ㅎ */
+  position: fixed;
+  /* => 광고에 자주 쓰는 방식 */
+  right: 0;
+  bottom: 0;
+  /* max-width: 400px; */
+  /* top: 50px; */
+  /* left: 200px; */
+  /* right: 50px; */
+  /* bottom: -50px; */
+  /* => top50과 bottom-50은 같음.*/
+  /* top: -100%; */
+  /* => top과 bottom에 퍼센트를 주는 것은 안먹힘 */
+  /* left: 100%; */
+  background-color: limegreen;
+}
